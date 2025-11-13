@@ -10,7 +10,6 @@ import java.util.List;
 public class UsersTypeService {
     private final UsersTypeRepository usersTypeRepository;
 
-
     public UsersTypeService(UsersTypeRepository usersTypeRepository) {
         this.usersTypeRepository = usersTypeRepository;
     }
