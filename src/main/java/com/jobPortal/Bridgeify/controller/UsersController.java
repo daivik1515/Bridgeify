@@ -51,7 +51,7 @@ public class UsersController {
             return "register";
         }
         usersService.addNewUser(users);
-        return "dashboard";
+        return "redirect:/dashboard/";
     }
     @GetMapping("/login")
     public String login()
@@ -66,7 +66,7 @@ public class UsersController {
         {
             new SecurityContextLogoutHandler().logout(request,response,authentication);
         }
-        return "/redirect:/";
+        return "redirect:/";
     }
 }
 
