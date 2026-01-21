@@ -26,6 +26,13 @@ public class JobSeekerProfile {
     @OneToMany(targetEntity = Skills.class,cascade = CascadeType.ALL,mappedBy = "jobSeekerProfile")
     private List<Skills> skills;
 
+//    @Transient
+//    public String getPhotosImagePath()
+//    {
+//        if(profilePhoto==null || userAccountId==null)  return null;
+//        return "photos/candidate/"+userAccountId+"/"+profilePhoto;
+//    }
+
     public JobSeekerProfile() {
 
     }
@@ -145,6 +152,7 @@ public class JobSeekerProfile {
         this.skills = skills;
     }
 
+    @Transient
     public String getPhotosImagePath()
     {
         if(profilePhoto==null || userAccountId==null) return null;
